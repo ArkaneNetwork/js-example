@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Arketype</title>
+
+  <link rel="stylesheet" href="/assets/css/auth.css"/>
+  <link rel="stylesheet" href="/assets/css/arketype.css"/>
+</head>
+
+<body>
+
+<div class="auth-logged-in">
+  <div>
+    <div id="user">
+      <h1>User <span id="auth-username"></span></h1>
+      <a id="auth-logout" href="javascript:void(0)"><span>Logout</span></a>
+    </div>
+
+    <form id="transaction-form">
+      <div id="wallets">
+        <h1>Wallets</h1>
+
+        <div id="wallets-manage">
+          <a id="manage-eth-wallets" class="btn" href="javascript:void(0)"><span>Manage Ethereum Wallets</span></a>
+          <a id="manage-vechain-wallets" class="btn" href="javascript:void(0)"><span>Manage VeChain Wallets</span></a>
+        </div>
+
+        <select id="wallets-select" name="from">
+          <option value="">Please select a wallet</option>
+        </select>
+
+        <div id="selected-wallet" class="hidden">
+          <div id="wallet-details">
+            <h2>Details</h2>
+            <table>
+              <tr>
+                <td>Address</td><td id="wallet-address"></td>
+              </tr>
+              <tr>
+                <td>Balance</td><td id="wallet-balance"></td>
+              </tr>
+              <tr>
+                <td>Gas Balance</td><td id="wallet-gas-balance"></td>
+              </tr>
+              <tr>
+                <td>Tokens</td><td id="wallet-tokens"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="transaction">
+            <h1>Transaction</h1>
+              <input type="hidden" id="secret-type" name="secretType" value=""/>
+              <label for="transaction-to">To:</label>
+              <input type="text" id="transaction-to" name="to" value=""/>
+              <label for="transaction-token">Token (optional):</label>
+              <select id="transaction-token" name="tokenAddress"></select>
+              <label for="transaction-amount">Amount:</label>
+              <input type="text" id="transaction-amount" name="amount" value=""/>
+              <input type="submit" value="Execute transaction"/>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="auth-not-logged-in">
+  <a id="auth-loginlink" href="javascript:void(0)">Login</a>
+</div>
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

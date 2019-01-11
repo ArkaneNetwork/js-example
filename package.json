@@ -1,0 +1,17 @@
+{
+  "name": "arketype",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "scripts": {
+    "copy-node_modules": "rm -rf public/node_modules && cp -R node_modules public",
+    "link-node_modules": "rm -rf public/node_modules && ln -s ../node_modules ./public/node_modules",
+    "start": "npm run copy-node_modules && http-server -p 4000 -a localhost -c-1",
+    "start-dev": "npm run link-node_modules && http-server -p 4000 -a localhost -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
