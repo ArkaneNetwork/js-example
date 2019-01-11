@@ -1,8 +1,9 @@
 {
-  "name": "arketype",
+  "name": "arkane-js-example",
   "version": "0.0.1",
   "description": "",
   "dependencies": {
+    "@arkane-network/arkane-connect": "latest",
     "jquery": "^3.3.1"
   },
   "scripts": {
