@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {
     "@arkane-network/arkane-connect": "latest",
-    "jquery": "^3.3.1"
+    "jquery": "^3.4.1"
   },
   "scripts": {
     "copy-node_modules": "rm -rf public/node_modules && cp -R node_modules public",
