@@ -13,6 +13,6 @@
     "start-dev": "npm run link-node_modules && http-server -p 4000 -a localhost -c-1"
   },
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.2"
   }
 }
